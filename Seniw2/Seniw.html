@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konwerter miar i wag</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="Seniw.js"></script>
+    </head>
+    <body>
+    <p style="color:red">23.02.2022 Antoni Seniw</p>
+        <form name="calc">
+            Podaj :
+            <input type="text" name="liczba">
+            <select name="konwersja">
+                <option value="km2m">kilometry na mile</option>
+                <option value="m2km">mile na kilometry</option>
+                <option value="cm2in">centrymenty na cale</option>
+                <option value="in2cm">cale na centrymenty</option>
+                <option value="ft2m">stopy na metry</option>
+                <option value="m2ft">metry na stopy</option>
+                <option value="l2g">litry na galony</option>
+                <option value="g2l">galony na litry</option>
+                <option value="p2kg">funty na kilogramy</option>
+                <option value="kg2p">kilogramy na funty</option>
+            </select>
+            <input type="button" name="przelicz" value="Przelicz" onclick="Przelicz(); return true">
+            <br>
+            <br>
+            Wynik: <input type="text" name="wynik" readonly>
+        </form>
+ </body>
+</html>
