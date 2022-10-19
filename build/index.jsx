@@ -1,20 +1,27 @@
+// Funkcja Names
 function Names() {
+    
+    const [showNamesSate, setShowNameState] = React.useState('true')
     const names = ['Kevin', 'Oscar', 'Pam']
-    const namesList = names.map(name => <li>{name}</li> )
-    const showNames = true
+    const namesList = names.map(name => <li key={name}>{name}</li> )
+    const toggleNames = () => setShowNameState(!showNamesSate)
+    
 
     return (
      <div>
-          {showNames ? <ul>{namesList}</ul>: 'Brak imion'}
+          {showNamesSate ? <ul>{namesList}</ul> : 'Brak imion'}
+    <button onClick={toggleNames}>Hide names</button>
+
     </div>
     )
 }
 
-
+// Funkcja Headline
 function Headline() {
-    const title = 'ReactJS'
-    const showNames = true
 
+
+    let title = 'ReactJS'
+    const showNames = true
 
     return (
     <div>
@@ -24,6 +31,8 @@ function Headline() {
     )
   }
 
+  
+  
   const container = document.getElementById('app');
   const app = ReactDOM.createRoot(container);
   app.render(<Headline />);
